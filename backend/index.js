@@ -59,6 +59,13 @@ app.use('/',storeAppointment);
 
 app.use('/admin',admin)
 
+app.get('/',(req,res)=>{
+  res.send({
+    activeStaus:true,
+    error:false
+  })
+
+})
 
 app.listen(PORT,()=>{
     // console.log(`server started ${PORT}`);
