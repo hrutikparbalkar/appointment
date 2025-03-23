@@ -33,7 +33,7 @@ const DoctorCheckAppointment = () => {
 
   const handleConfirm =async(appointmentID)=>{
     try {
-      const response = await fetch(`http://localhost:8009/confirm/${appointmentID}`,{
+      const response = await fetch(`${BACKEND_URL}/confirm/${appointmentID}`,{
         method:"PUT",
         headers:{
           "Content-type":"application/json",

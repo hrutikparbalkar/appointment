@@ -47,7 +47,7 @@ const UserAppointment = () => {
           confirmButtonText: "Yes, cancel it!"
         });
         if(conformation.isConfirmed){
-            const response = await fetch(`http://localhost:8009/${id}`,{
+            const response = await fetch(`${BACKEND_URL}/${id}`,{
               method:"DELETE"
             });
             if(response.ok){

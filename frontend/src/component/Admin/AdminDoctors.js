@@ -37,7 +37,7 @@ const AdminDoctors = () => {
         confirmButtonText: "Yes, delete it!"
         });
       if(conformation.isConfirmed){
-        const response = await fetch(`http://localhost:8009/admin/delete/${doctorId}`,{
+        const response = await fetch(`${BACKEND_URL}/admin/delete/${doctorId}`,{
           method:'DELETE'
         })
         if(response.ok){

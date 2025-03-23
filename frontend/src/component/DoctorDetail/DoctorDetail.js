@@ -62,7 +62,7 @@ const DoctorDetail = () => {
         confirmButtonText: "Yes!"
         });
       if(conformation.isConfirmed){
-        const response = await fetch("http://localhost:8009/appointment",{
+        const response = await fetch(`${BACKEND_URL}/appointment`,{
           method:"POST",
           headers:{"Content-type":"application/json"},
           body:JSON.stringify(appointmentData),
