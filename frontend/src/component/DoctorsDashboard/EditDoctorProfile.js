@@ -74,7 +74,7 @@ const EditDoctorProfile = () => {
         updatedFields.img = formData.img.trim();
       }
   
-      const response = await fetch(`http://localhost:8009/updateDoctor/${id}`, {
+      const response = await fetch(`${BACKEND_URL}/updateDoctor/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

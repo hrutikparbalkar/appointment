@@ -56,7 +56,7 @@ const UserProfile = () => {
         updatedFields.password = formData.password;
       }
   
-      const response = await fetch(`http://localhost:8009/updateUserInfo/${authUser._id}`, {
+      const response = await fetch(`${BACKEND_URL}/updateUserInfo/${authUser._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
