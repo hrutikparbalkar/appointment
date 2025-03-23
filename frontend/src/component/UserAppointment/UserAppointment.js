@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useAuth } from '../AuthContext/AuthContext';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2'
+import { ClipLoader } from "react-spinners";
+
 
 const UserAppointment = () => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -127,7 +129,9 @@ const UserAppointment = () => {
       ))}
     </div>
   ) : (
-    <p className="text-center text-gray-500 text-lg">No appointments found</p>
+    <div className="flex justify-center items-center min-h-screen">
+          <ClipLoader size={70} color="#36D7B7" />
+        </div>
   )}
 </div>
 
