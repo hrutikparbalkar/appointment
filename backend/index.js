@@ -17,7 +17,7 @@ const PORT =process.env.PORT || 9000
 const MongodbURL = process.env.MongodbURL;
 const allowedOrigins = [
     'http://localhost:3000',  // Local development
-    'https://doctor-appointment-web-app-deploy.onrender.com'  // Production
+    'https://doctor-appointment-web-appp.netlify.app/'  // Production
   ];
 
 
