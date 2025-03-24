@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
+import { ClipLoader } from "react-spinners";
+
 
 const AdminDoctors = () => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
@@ -69,7 +71,9 @@ const AdminDoctors = () => {
       <h1 className="text-4xl font-bold text-center mb-10 text-blue-500">Doctors List</h1>
 
       {loading ? (
-        <p className="text-center text-gray-500">Loading...</p>
+        <div className="flex justify-center items-center min-h-screen">
+        <ClipLoader color="#36D7B7" />
+        </div>
       ) : (
         <div className="space-y-6">
           {doctorsData.map((doctor) => (

@@ -130,7 +130,7 @@ const UserAppointment = () => {
     </div>
   ) : (
     <div className="flex justify-center items-center min-h-screen">
-          <ClipLoader size={70} color="#36D7B7" />
+          <ClipLoader size={50} color="#36D7B7" />
         </div>
   )}
 </div>

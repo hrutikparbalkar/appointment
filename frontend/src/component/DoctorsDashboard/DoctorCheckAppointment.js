@@ -67,7 +67,7 @@ const DoctorCheckAppointment = () => {
   <h2 className="text-3xl font-bold mb-6 text-center">Doctor Appointments</h2>
 
   {myAppointments.length === 0 ? (
-    <p className="text-gray-500">No appointments found</p>
+    <p className="text-gray-500 text-center">No appointments found</p>
   ) : (
     <div className="flex flex-wrap gap-6">
       {myAppointments.map((appointment) => (

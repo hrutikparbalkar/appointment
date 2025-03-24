@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../AuthContext/AuthContext';
 import { toast} from 'react-hot-toast';
+import { ClipLoader } from "react-spinners";
 const UserProfile = () => {
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+  
   const [authUser]=useAuth();
   const [userData,setUserData] = useState(null);
   const [isEditing,setIsEditing]=useState(false);
@@ -16,6 +18,7 @@ const UserProfile = () => {
   useEffect(()=>{
     const getData = async()=>{
       try {
+        
         const response = await fetch(`${BACKEND_URL}/userProfile/${authUser._id}`);
         const data  = await response.json();
         setUserData(data)
@@ -28,7 +31,9 @@ const UserProfile = () => {
     getData();
   },[authUser])
   if (!userData) {
-    return <p className="text-center text-lg mt-10">Loading profile...</p>;
+    return <div className="flex justify-center items-center min-h-screen">
+              <ClipLoader color="#36D7B7" />
+            </div>
   }
   // console.log(userData);
   const handleEdit=()=>{
