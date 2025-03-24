@@ -1,13 +1,15 @@
 import React from 'react';
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const HomeBody = () => {
+  Aos.init();
   return (
     <div className="py-8">
       <h1 className="text-center md:mt-8 mt-6 md:text-4xl text-2xl font-bold">
         Our Medical Services
       </h1>
 
-      <div className="mt-10 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-16">
+      <div className="mt-10 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-16 "  data-aos="fade-right" data-aos-delay="300">
         {/* Mental Health */}
         <div className="bg-red-100 p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold text-center">🧠 Mental Health</h2>

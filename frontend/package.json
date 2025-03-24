@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "^8.17.1",
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-calendar": "^5.1.0",

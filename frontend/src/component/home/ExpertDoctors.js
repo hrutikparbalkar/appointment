@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../AuthContext/AuthContext";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 const ExpertDoctors = () => {
+  Aos.init();
   const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
   const [ExpertDoctors, setExpertDoctors] = useState([]);
   const [authUser, , doctorInfo] = useAuth();
@@ -26,7 +29,7 @@ const ExpertDoctors = () => {
         Top Doctors to Book
       </h1>
 
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-duration="3000">
         {ExpertDoctors.slice(0, 3).map((data, index) => (
           <Link
             to={authUser || doctorInfo ? "/alldoctors" : "/login"}
