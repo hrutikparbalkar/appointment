@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext/AuthContext';
 import { toast } from 'react-hot-toast';
-import PersonIcon from '@mui/icons-material/Person';
+import 'animate.css';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -33,11 +33,11 @@ const Navbar = () => {
         
         {/* Logo */}
         <Link to={'/'} onClick={closeMenu}>
-          <h1 className="text-2xl font-extrabold cursor-pointer">QuickCare</h1>
+          <h1 className="text-2xl font-extrabold cursor-pointer animate__animated animate__backInLeft animate__delay-0.5s">QuickCare</h1>
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center lg:gap-8 md:gap-4 text-lg font-semibold">
+        <ul className="hidden md:flex items-center lg:gap-8 md:gap-4 text-lg font-semibold animate__animated animate__bounceInRight animate__delay-0.5s">
           <Link to={'/'} onClick={closeMenu}><li className="hover:text-gray-200 transition">Home</li></Link>
           {authUser && <Link to={'/alldoctors'} onClick={closeMenu}><li className="hover:text-gray-200 transition">All Doctors</li></Link>}
           {authUser && <Link to={'/AllAppointments'} onClick={closeMenu}><li className="hover:text-gray-200 transition">My Appointments</li></Link>}
