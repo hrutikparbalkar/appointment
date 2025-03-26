@@ -64,7 +64,7 @@ const DoctorCheckAppointment = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-  <h2 className="text-3xl font-bold mb-6 text-center">Doctor Appointments</h2>
+  <h2 className="text-3xl font-bold mb-6 text-center text-blue-500">Doctor Appointments</h2>
 
   {myAppointments.length === 0 ? (
     <p className="text-gray-500 text-center">No appointments found</p>
