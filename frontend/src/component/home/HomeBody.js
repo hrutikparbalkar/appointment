@@ -9,7 +9,7 @@ const HomeBody = () => {
         Our Medical Services
       </h1>
 
-      <div className="mt-10 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-16 "  data-aos="fade-right" data-aos-delay="300">
+      <div className="mt-10 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 px-4 md:px-16 "  data-aos="fade-right" data-aos-easing="ease-in-sine">
         {/* Mental Health */}
         <div className="bg-red-100 p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold text-center">🧠 Mental Health</h2>

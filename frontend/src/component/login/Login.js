@@ -31,7 +31,7 @@ const Login = () => {
           setTimeout(()=>{
             navigate("/")
             window.location.reload()
-          },3000)
+          },1000)
       }
       else{
         toast.error('password or email wrong');
