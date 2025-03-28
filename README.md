@@ -26,9 +26,6 @@ cd your-project-folder
 
 ### 2️⃣ **Install Dependencies**
 Install dependencies
-bash
-Copy
-Edit
 # For backend
 cd backend
 npm install
@@ -43,7 +40,7 @@ MONGO_URI=your_mongodb_url
 PORT=5000
 
 Frontend .env:
-REACT_APP_BACKEND_URL=http://localhost:5000
+REACT_APP_BACKEND_URL=your_backend_url
 REACT_APP_ADMIN_EMAIL=your_admin_email
 REACT_APP_ADMIN_PASS=your_admin_password
 
